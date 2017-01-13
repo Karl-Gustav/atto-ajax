@@ -9,7 +9,7 @@
                 _doneHandler && _doneHandler(request.responseText, request);
             } else {
                 _errorHandler && _errorHandler(
-                    new Error(request.responseText), request
+                    new Error(request.statusText), request
                 );
             }
             _finallyHandler && _finallyHandler(null, request)
@@ -47,4 +47,3 @@
         };
     }
 }(window))
-

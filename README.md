@@ -12,7 +12,7 @@ NO!!!
 
 ## Usage
 
-    picoajax({
+    atto({
         url: '/',
         method: 'GET', // or POST, PUT, DELETE, and so on
         data: '<some data>',

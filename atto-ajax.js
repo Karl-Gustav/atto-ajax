@@ -23,8 +23,8 @@
 
         request.onerror = function() {
             var e = new Error('Connection error');
-            _errorHandler && _errorHandler(error);
-            _finallyHandler && _finallyHandler(error)
+            _errorHandler && _errorHandler(e, {});
+            _finallyHandler && _finallyHandler(e)
         };
         setTimeout(function() {
             request.send(config.data);

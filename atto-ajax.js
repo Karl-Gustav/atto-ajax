@@ -9,7 +9,7 @@
                 _doneHandler && _doneHandler(request.responseText, request);
             } else {
                 _errorHandler && _errorHandler(
-                    new Error(request.statusText), request
+                    new Error(request.responseText || request.statusText), request
                 );
             }
             _finallyHandler && _finallyHandler(null, request)
